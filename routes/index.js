@@ -19,7 +19,7 @@ router.post('/shorturl', async function(req, res, next) {
       //console.log(user)
       let userID = user.id
       let short = Math.random().toString(20).substr(2,6)
-      let shortURL = `http://127.0.0.1:3000/short/${short}`
+      let shortURL = `https://bi-url-temp.herokuapp.com//short/${short}`
       let longURL = req.body.url
       await db.collection("urls").insertOne({
         short, shortURL,longURL,count:0
